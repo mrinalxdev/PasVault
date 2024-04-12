@@ -2,6 +2,7 @@ mod psentry;
 
 use crate::psentry::prompt;
 use crate::psentry::read_passwords_from_file;
+use crate::psentry::ServiceInfo;
 
 fn clr() {
     print!("{}[2J", 27 as char);
@@ -46,7 +47,13 @@ fn main() {
         std::io::stdin().read_line(&mut choice).unwrap();
 
         match choice.trim() {
-            "1" => {}
+            "1" => {
+                clr();
+                let entry = ServiceInfo::new(
+                    clr();
+                    let entry = ServiceInfo
+                )
+            }
             "2" => {
                 clr();
                 let services = read_passwords_from_file().unwrap_or_else(|err| {
